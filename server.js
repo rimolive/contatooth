@@ -1,7 +1,6 @@
 var http = require('http');
 var express = require('express');
-v
-r app = require('./config/express')(app);
+var app = require('./config/express')(app);
 require('./config/passport')();
 require('./config/database.js')('mongodb://admin:RQayuslUdchmbOYX@172.30.253.38/contatooth');
 
