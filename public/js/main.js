@@ -1,6 +1,6 @@
 angular.module('contatooth', ['ngRoute', 'ngResource'])
 	.config(function($routeProvider, $httpProvider) {
-		$httpProvider.interceptors.push('meuInterceptor');
+		//$httpProvider.interceptors.push('meuInterceptor');
 
 		$routeProvider.when('/contatos', {
 			templateUrl: 'partials/contatos.html',
