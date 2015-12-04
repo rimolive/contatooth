@@ -18,15 +18,15 @@ module.exports = function() {
 	app.use(require('method-override')());
 
 	app.use(cookieParser());
-	app.use(session(
-		{
-			secret: 'ok google',
-			resave: true,
-			saveUninitialized: true
-		}
-	));
-	app.use(passport.initialize());
-	app.use(passport.session());
+	//app.use(session(
+	//	{
+	//		secret: 'ok google',
+	//		resave: true,
+	//		saveUninitialized: true
+	//	}
+	//));
+	//app.use(passport.initialize());
+	//app.use(passport.session());
 	app.use(helmet.xframe());
 	app.use(helmet.xssFilter());
 	app.use(helmet.nosniff());
