@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
-module.exports = function(uri) {
-	mongoose.connect(uri);
+module.exports = function(uri, options) {
+	mongoose.connect(uri, options);
 
 	process.on('SIGINT', function() {
 		mongoose.connection.close(function() {
