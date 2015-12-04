@@ -14,7 +14,7 @@ function(Contato, $scope) {
 				$scope.mensagem = {};
 			},
 			function(erro) {
-				console.log(statusText);
+				console.log(erro);
 				$scope.mensagem = {
 					texto: "Não foi possível obter a lista de contatos"
 				};
