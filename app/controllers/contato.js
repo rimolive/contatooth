@@ -56,7 +56,7 @@ module.exports = function(app) {
 		};
 
 		if(_id) {
-			Contato.findByIdAndUpdate(_id, req.body).exec()
+			Contato.findByIdAndUpdate(_id, dados).exec()
 			.then(
 				function(contato) {
 					res.json(contato);
@@ -67,7 +67,7 @@ module.exports = function(app) {
 				}
 			);
 		} else {
-			Contato.create(req.body)
+			Contato.create(dados)
 			.then(
 				function(contato) {
 					res.status(201).json(contato);
