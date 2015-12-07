@@ -9,7 +9,7 @@ var helmet = require('helmet');
 module.exports = function() {
 	var app = express();
 
-	app.set('port', 8080);
+	app.set('port', 3000);
 	app.use(express.static('./public'));
 	app.set('view engine', 'ejs');
 	app.set('views', './app/views');
@@ -18,15 +18,15 @@ module.exports = function() {
 	app.use(require('method-override')());
 
 	app.use(cookieParser());
-	//app.use(session(
-	//	{
-	//		secret: 'ok google',
-	//		resave: true,
-	//		saveUninitialized: true
-	//	}
-	//));
-	//app.use(passport.initialize());
-	//app.use(passport.session());
+	app.use(session(
+		{
+			secret: 'ok google',
+			resave: true,
+			saveUninitialized: true
+		}
+	));
+	app.use(passport.initialize());
+	app.use(passport.session());
 	app.use(helmet.xframe());
 	app.use(helmet.xssFilter());
 	app.use(helmet.nosniff());
