@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 var app = require('./config/express')(app);
 require('./config/passport')();
-require('./config/database.js')('mongodb://localhost/contatooth');
+require('./config/database.js')('mongodb://localhost/contatooth', 'user8UY', 'StsiCQ8jpUpBF3b3');
 
 http.createServer(app).listen(app.get('port'), function() {
 	console.log('Express server escutando na porta ' + app.get('port'));
